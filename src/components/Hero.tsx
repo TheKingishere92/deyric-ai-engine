@@ -20,47 +20,47 @@ const Hero = () => {
       />
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
         {/* Availability Badge */}
         <div className="mb-6 animate-fade-up">
-          <Badge variant="outline" className="glass text-primary border-primary/50 px-4 py-2">
+          <Badge variant="outline" className="glass text-primary border-primary/50 px-3 py-2 text-xs sm:text-sm">
             Limited build slots open this month
           </Badge>
         </div>
 
         {/* Eyebrow */}
         <div className="mb-4 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-          <span className="text-accent text-sm font-semibold tracking-wider uppercase">
+          <span className="text-accent text-xs sm:text-sm font-semibold tracking-wider uppercase">
             World-Class AI Execution
           </span>
         </div>
 
         {/* Headline */}
-        <h1 className="heading-xl text-primary mb-6 max-w-4xl mx-auto animate-fade-up" style={{ animationDelay: '0.2s' }}>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-6 max-w-4xl mx-auto animate-fade-up leading-tight" style={{ animationDelay: '0.2s' }}>
           We build AI systems that deliver{" "}
           <span className="gradient-hero bg-clip-text text-transparent">human results</span>.
         </h1>
 
         {/* Subheadline */}
-        <p className="text-xl text-secondary mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: '0.3s' }}>
+        <p className="text-base sm:text-lg lg:text-xl text-secondary mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-up px-4" style={{ animationDelay: '0.3s' }}>
           Operators who wire your funnels, CRMs, automations, voice agents, and dashboards 
           into a single growth engine.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-up" style={{ animationDelay: '0.4s' }}>
-          <Button size="lg" className="glass glow-hover gradient-hero text-white px-8 py-6 text-lg font-semibold" asChild>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-up px-4" style={{ animationDelay: '0.4s' }}>
+          <Button size="lg" className="glass glow-hover gradient-hero text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold touch-manipulation" asChild>
             <Link to="/contact#book">Book a Strategy Call</Link>
           </Button>
-          <Button size="lg" variant="outline" className="glass glow-hover px-8 py-6 text-lg" asChild>
+          <Button size="lg" variant="outline" className="glass glow-hover px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg touch-manipulation" asChild>
             <Link to="/services">See Services</Link>
           </Button>
         </div>
 
         {/* Proof Badges */}
-        <div className="flex flex-wrap justify-center gap-4 animate-fade-up" style={{ animationDelay: '0.5s' }}>
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 animate-fade-up px-4" style={{ animationDelay: '0.5s' }}>
           {badges.map((badge, index) => (
-            <Badge key={index} variant="secondary" className="glass text-primary px-4 py-2 text-sm font-medium">
+            <Badge key={index} variant="secondary" className="glass text-primary px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium">
               {badge}
             </Badge>
           ))}

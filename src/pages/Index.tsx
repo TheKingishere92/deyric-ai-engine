@@ -34,26 +34,26 @@ const Index = () => {
         <ProofMetrics />
         
         {/* Case Studies Preview */}
-        <section className="py-24 bg-surface-elevated">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="heading-lg text-primary mb-4">Recent wins</h2>
+        <section className="py-16 sm:py-24 bg-surface-elevated">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-4">Recent wins</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
               {casePreview.map((caseStudy, index) => (
                 <Link key={index} to={caseStudy.link} className="group">
-                  <Card className="glass border-outline glow-hover cursor-pointer">
-                    <CardHeader>
-                      <div className="flex items-start justify-between">
-                        <div className="p-3 rounded-xl bg-accent/10 border border-accent/20 mb-4 group-hover:bg-accent/20 transition-colors">
+                  <Card className="glass border-outline glow-hover cursor-pointer h-full touch-manipulation">
+                    <CardHeader className="pb-4">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="p-3 rounded-xl bg-accent/10 border border-accent/20 group-hover:bg-accent/20 transition-colors">
                           <TrendingUp className="h-6 w-6 text-accent" />
                         </div>
                       </div>
-                      <CardTitle className="text-primary text-xl">{caseStudy.title}</CardTitle>
+                      <CardTitle className="text-primary text-lg sm:text-xl leading-tight">{caseStudy.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-secondary text-base leading-relaxed">
+                    <CardContent className="pt-0">
+                      <CardDescription className="text-secondary text-sm sm:text-base leading-relaxed">
                         {caseStudy.summary}
                       </CardDescription>
                     </CardContent>
