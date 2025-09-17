@@ -4,18 +4,18 @@ import { Target, Zap, Wrench } from "lucide-react";
 const Pillars = () => {
   const pillars = [
     {
-      title: "Clarity",
-      body: "Ruthless scoping to ship the 20% that drives 80% of outcomes.",
+      title: "Execution",
+      body: "Execution over talk — systems built fast, not theory.",
       icon: Target,
     },
     {
-      title: "Speed", 
-      body: "Sprints, SLAs, and tight feedback loops you can track.",
+      title: "Global", 
+      body: "Premium UK positioning with global delivery.",
       icon: Zap,
     },
     {
-      title: "Execution",
-      body: "Done-for-you systems that launch fast and scale globally.",
+      title: "Premium",
+      body: "Two-lane pricing: Quick wins & Enterprise solutions.",
       icon: Wrench,
     },
   ];
@@ -24,7 +24,7 @@ const Pillars = () => {
     <section className="py-16 sm:py-24 bg-surface-elevated">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-4">All signal. No noise.</h2>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-4">Why Deyric?</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">

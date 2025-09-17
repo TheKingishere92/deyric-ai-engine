@@ -11,6 +11,8 @@ interface CTABannerProps {
 }
 
 const CTABanner = ({ headline, subheadline, primaryCta }: CTABannerProps) => {
+  const isExternalLink = primaryCta.href.startsWith('http') || primaryCta.href.startsWith('mailto:');
+  
   return (
     <section className="py-16 sm:py-24 bg-surface">
       <div className="container mx-auto px-4 sm:px-6 text-center">
@@ -26,7 +28,11 @@ const CTABanner = ({ headline, subheadline, primaryCta }: CTABannerProps) => {
             className="glass glow-hover gradient-hero text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold touch-manipulation" 
             asChild
           >
-            <Link to={primaryCta.href}>{primaryCta.label}</Link>
+            {isExternalLink ? (
+              <a href={primaryCta.href} target="_blank" rel="noopener noreferrer">{primaryCta.label}</a>
+            ) : (
+              <Link to={primaryCta.href}>{primaryCta.label}</Link>
+            )}
           </Button>
         </div>
       </div>

@@ -65,9 +65,9 @@ const Index = () => {
         </section>
 
         <CTABanner
-          headline="Plug into the future with AI."
-          subheadline="Let's wire your systems into a predictable growth engine."
-          primaryCta={{ label: "Start your build sprint", href: "/contact#book" }}
+          headline="Plug Into the Future with AI"
+          subheadline="Start your build sprint today."
+          primaryCta={{ label: "Book Your Free Strategy Call", href: "https://calendly.com/david-deyric/20min-1" }}
         />
       </main>
 

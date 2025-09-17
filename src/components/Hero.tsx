@@ -37,29 +37,29 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-6 max-w-4xl mx-auto animate-fade-in-scale opacity-0 leading-tight" style={{ animationDelay: '0.6s' }}>
-          We build AI systems that deliver{" "}
+          We Build AI Systems That Deliver{" "}
           <span className="gradient-hero bg-clip-text text-transparent relative">
-            human results
+            Human Results
             <div className="absolute inset-0 gradient-hero bg-clip-text text-transparent animate-pulse opacity-50"></div>
-          </span>.
+          </span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-base sm:text-lg lg:text-xl text-secondary mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up opacity-0 px-4" style={{ animationDelay: '0.8s' }}>
-          Operators who wire your funnels, CRMs, automations, voice agents, and dashboards 
+          Operators who wire your funnels, CRMs, automations, dashboards, and AI assistants 
           into a single growth engine.
         </p>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-scale opacity-0 px-4" style={{ animationDelay: '1.0s' }}>
           <Button size="lg" className="glass button-magnetic gradient-hero text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold touch-manipulation relative overflow-hidden group" asChild>
-            <Link to="/contact#book">
+            <a href="https://calendly.com/david-deyric/20min-1" target="_blank" rel="noopener noreferrer">
               <span className="relative z-10">Book a Strategy Call</span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent-alt to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Link>
+            </a>
           </Button>
           <Button size="lg" variant="outline" className="glass hover-lift px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg touch-manipulation" asChild>
-            <Link to="/services">See Services</Link>
+            <Link to="/services">Explore Services</Link>
           </Button>
         </div>
 
