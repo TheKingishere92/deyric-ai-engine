@@ -10,12 +10,14 @@ const Hero = () => {
     <section className="hero-animated relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 animate-liquid-flow"
         style={{
           backgroundImage: `linear-gradient(rgba(10,10,18,0.35), rgba(10,10,18,0.75)), url(${heroBackground})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
+          animation: 'liquidFlow 25s ease-in-out infinite',
+          willChange: 'transform'
         }}
       />
       
