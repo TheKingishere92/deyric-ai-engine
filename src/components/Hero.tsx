@@ -1,23 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroVideo from "@/assets/hero-background-video.mp4";
 
 const Hero = () => {
   const badges = ["10× faster delivery", "24/7 automation", "47% conversion gains"];
 
   return (
     <section className="hero-animated relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 z-0 w-full h-full object-cover"
+        style={{ willChange: 'transform' }}
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+      
+      {/* Video Overlay */}
       <div 
-        className="absolute inset-0 z-0 animate-liquid-flow"
+        className="absolute inset-0 z-[1]"
         style={{
-          backgroundImage: `linear-gradient(rgba(10,10,18,0.35), rgba(10,10,18,0.75)), url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          animation: 'liquidFlow 25s ease-in-out infinite',
-          willChange: 'transform'
+          background: 'linear-gradient(rgba(10,10,18,0.35), rgba(10,10,18,0.75))'
         }}
       />
       
