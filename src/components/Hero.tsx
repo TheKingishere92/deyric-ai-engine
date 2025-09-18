@@ -24,7 +24,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-[1]"
         style={{
-          background: 'linear-gradient(rgba(10,10,18,0.35), rgba(10,10,18,0.75))'
+          background: 'linear-gradient(rgba(10,10,18,0.55), rgba(10,10,18,0.85))'
         }}
       />
       
