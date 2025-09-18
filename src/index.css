@@ -286,6 +286,76 @@ All colors MUST be HSL. Glass morphism and premium effects included.
   }
 }
 
+/* Brand logo utilities */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-sm {
+  height: 32px;
+}
+
+.logo-md {
+  height: 40px;
+}
+
+.logo-lg {
+  height: 48px;
+}
+
+.brand-wordmark {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .brand-wordmark {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .brand-wordmark {
+    font-size: 20px;
+  }
+}
+
+/* Hero animated background */
+.hero-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-animated::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(120% 60% at 20% 20%, rgba(142, 63, 255, 0.25), transparent 60%), 
+              radial-gradient(120% 60% at 80% 30%, rgba(255, 94, 247, 0.22), transparent 60%), 
+              radial-gradient(160% 80% at 50% 80%, rgba(82, 39, 255, 0.18), transparent 60%);
+  filter: blur(30px);
+  animation: etherFlow 18s linear infinite;
+  will-change: transform;
+}
+
+@keyframes etherFlow {
+  0% { 
+    transform: translate3d(-2%, -2%, 0) scale(1); 
+  }
+  33% { 
+    transform: translate3d(2%, -1%, 0) scale(1.03); 
+  }
+  66% { 
+    transform: translate3d(-1%, 2%, 0) scale(0.98); 
+  }
+  100% { 
+    transform: translate3d(-2%, -2%, 0) scale(1); 
+  }
+}
+
 /* Enhanced Keyframes */
 @keyframes fadeUp {
   from {

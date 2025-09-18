@@ -21,12 +21,15 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 hover-lift transition-transform">
+          <Link to="/" className="brand-logo hover-lift transition-transform" role="banner">
             <img 
               src={deyricLogo} 
-              alt="Deyric" 
-              className="h-8 w-auto sm:h-10 filter brightness-0 invert"
+              alt="Deyric logo" 
+              className="logo-sm sm:logo-md lg:logo-lg w-auto object-contain"
             />
+            <span className="brand-wordmark text-primary">
+              Deyric
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

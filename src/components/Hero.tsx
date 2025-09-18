@@ -7,7 +7,7 @@ const Hero = () => {
   const badges = ["10× faster delivery", "24/7 automation", "47% conversion gains"];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="hero-animated relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"
