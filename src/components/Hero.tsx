@@ -1,30 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import heroVideo from "@/assets/hero-background-video.mp4";
+import NeuralNetworkBackground from "@/components/NeuralNetworkBackground";
 
 const Hero = () => {
   return (
-    <section className="hero-animated relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 z-0 w-full h-full object-cover"
-        style={{ willChange: 'transform' }}
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
-      
-      {/* Video Overlay */}
-      <div 
-        className="absolute inset-0 z-[1]"
-        style={{
-          background: 'linear-gradient(rgba(10,10,18,0.45), rgba(10,10,18,0.60))'
-        }}
-      />
-      
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Neural Network Background */}
+      <NeuralNetworkBackground />
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center max-w-5xl">
         {/* Promo Badge */}
@@ -81,13 +64,6 @@ const Hero = () => {
         >
           ✓ 2-4 week deployment &nbsp;|&nbsp; ✓ No setup fee for first 5 clients &nbsp;|&nbsp; ✓ 30-day performance guarantee
         </p>
-      </div>
-
-      {/* Background Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-[hsl(var(--accent))] rounded-full animate-float" style={{ animationDelay: '2s', animationDuration: '8s' }}></div>
-        <div className="absolute top-40 right-20 w-1 h-1 bg-[hsl(var(--accent-alt))] rounded-full animate-float" style={{ animationDelay: '3s', animationDuration: '10s' }}></div>
-        <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-[hsl(var(--accent-strong))] rounded-full animate-float" style={{ animationDelay: '1s', animationDuration: '12s' }}></div>
       </div>
     </section>
   );
