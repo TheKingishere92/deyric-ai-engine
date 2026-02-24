@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface CTABannerProps {
@@ -11,29 +11,44 @@ interface CTABannerProps {
 }
 
 const CTABanner = ({ headline, subheadline, primaryCta }: CTABannerProps) => {
-  const isExternalLink = primaryCta.href.startsWith('http') || primaryCta.href.startsWith('mailto:');
-  
+  const isExternal = primaryCta.href.startsWith("http") || primaryCta.href.startsWith("mailto:");
+
   return (
-    <section className="py-16 sm:py-24 bg-surface">
-      <div className="container mx-auto px-4 sm:px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-6">{headline}</h2>
+    <section className="py-20 sm:py-28 bg-surface-elevated">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-sm font-bold text-[hsl(var(--accent))] uppercase tracking-wider mb-4">
+            Ready to start?
+          </p>
+          <h2 className="heading-lg text-primary mb-6">{headline}</h2>
           {subheadline && (
-            <p className="text-base sm:text-lg lg:text-xl text-secondary mb-8 leading-relaxed px-4">
+            <p className="text-base sm:text-lg text-secondary mb-10 leading-relaxed max-w-2xl mx-auto">
               {subheadline}
             </p>
           )}
-          <Button 
-            size="lg" 
-            className="glass glow-hover gradient-hero text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold touch-manipulation" 
-            asChild
-          >
-            {isExternalLink ? (
-              <a href={primaryCta.href} target="_blank" rel="noopener noreferrer">{primaryCta.label}</a>
-            ) : (
-              <Link to={primaryCta.href}>{primaryCta.label}</Link>
-            )}
-          </Button>
+          {isExternal ? (
+            <a
+              href={primaryCta.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-[hsl(var(--accent))] text-white px-8 py-4 rounded-full text-sm font-bold hover:bg-[hsl(var(--accent-strong))] transition-all duration-300 hover:scale-105 group shadow-lg shadow-[hsl(var(--accent)/0.25)]"
+            >
+              {primaryCta.label}
+              <span className="bg-white/20 rounded-full p-1.5 group-hover:translate-x-1 transition-transform">
+                <ArrowRight className="h-4 w-4" />
+              </span>
+            </a>
+          ) : (
+            <Link
+              to={primaryCta.href}
+              className="inline-flex items-center gap-3 bg-[hsl(var(--accent))] text-white px-8 py-4 rounded-full text-sm font-bold hover:bg-[hsl(var(--accent-strong))] transition-all duration-300 hover:scale-105 group shadow-lg shadow-[hsl(var(--accent)/0.25)]"
+            >
+              {primaryCta.label}
+              <span className="bg-white/20 rounded-full p-1.5 group-hover:translate-x-1 transition-transform">
+                <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
+          )}
         </div>
       </div>
     </section>
