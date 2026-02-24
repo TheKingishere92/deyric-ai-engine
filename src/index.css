@@ -2,114 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Deyric Design System - Premium AI Execution Partner
-All colors MUST be HSL. Glass morphism and premium effects included.
+/* Deyric Design System - Clean Light B2B Professional
+   Inspired by onradar.nl — light blue-gray backgrounds, dark navy text, orange CTA accents.
+   All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 238 35% 7%;  /* #0A0A12 */
-    --foreground: 250 13% 95%; /* #ECECF5 */
-    --surface: 238 38% 10%;    /* #11111A */
-    --surface-elevated: 240 33% 14%; /* #151524 */
+    /* Core Colors — Light professional palette */
+    --background: 207 33% 95%;       /* #EDF2F7 soft blue-gray */
+    --foreground: 215 28% 17%;       /* #1E293B dark navy */
+    --surface: 210 25% 92%;          /* #E2E8F0 */
+    --surface-elevated: 0 0% 100%;   /* #FFFFFF */
 
     /* Text Colors */
-    --text-primary: 250 13% 95%;   /* #ECECF5 */
-    --text-secondary: 247 14% 78%; /* #B2B2C8 */
-    --text-muted: 247 12% 58%;     /* #7A7A96 */
+    --text-primary: 215 28% 17%;     /* #1E293B */
+    --text-secondary: 215 16% 47%;   /* #64748B */
+    --text-muted: 215 14% 62%;       /* #94A3B8 */
 
-    /* Brand Accent Colors */
-    --accent: 252 85% 63%;      /* #8B5CF6 */
-    --accent-strong: 260 76% 50%; /* #6D28D9 */
-    --accent-alt: 250 100% 58%;   /* #5227FF */
+    /* Brand Accent — Orange/Coral CTA */
+    --accent: 16 100% 60%;           /* #FF6B35 orange */
+    --accent-strong: 16 100% 50%;    /* #FF5216 */
+    --accent-alt: 16 100% 55%;
     --accent-foreground: 0 0% 100%;
 
     /* System Colors */
-    --success: 142 71% 45%;     /* #22C55E */
-    --warning: 38 92% 50%;      /* #F59E0B */
-    --error: 0 84% 60%;         /* #EF4444 */
-    
-    /* Glass Morphism */
-    --glass-bg: 238 38% 10% / 0.45;
-    --glass-border: 252 85% 63% / 0.25;
-    --outline: 252 85% 63% / 0.35;
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --error: 0 84% 60%;
+
+    /* Glass / Borders */
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 215 20% 85% / 0.6;
+    --outline: 215 20% 85%;
 
     /* Interactive States */
-    --hover-glow: 252 85% 63% / 0.28;
-    
+    --hover-glow: 16 100% 60% / 0.15;
+
     /* Component Mappings */
-    --card: var(--surface);
+    --card: 0 0% 100%;
     --card-foreground: var(--text-primary);
-    --popover: var(--surface-elevated);
+    --popover: 0 0% 100%;
     --popover-foreground: var(--text-primary);
-    --primary: var(--accent);
-    --primary-foreground: var(--accent-foreground);
-    --secondary: var(--surface-elevated);
+    --primary: var(--text-primary);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--surface);
     --secondary-foreground: var(--text-primary);
     --muted: var(--surface);
     --muted-foreground: var(--text-muted);
     --destructive: var(--error);
     --destructive-foreground: 0 0% 100%;
-    --border: 240 33% 14%;
-    --input: var(--surface-elevated);
+    --border: 215 20% 88%;
+    --input: var(--surface);
     --ring: var(--accent);
 
-    /* Border Radius System */
-    --radius: 1rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -120,13 +75,13 @@ All colors MUST be HSL. Glass morphism and premium effects included.
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
   }
 }
 
 /* Custom Design System Utilities */
 @layer components {
-  /* Glass Morphism Effects */
+  /* Glass Morphism — lighter version for light theme */
   .glass {
     backdrop-filter: blur(16px);
     background: hsl(var(--glass-bg));
@@ -135,22 +90,29 @@ All colors MUST be HSL. Glass morphism and premium effects included.
 
   .glass-subtle {
     backdrop-filter: blur(12px);
-    background: hsl(var(--surface) / 0.6);
+    background: hsl(0 0% 100% / 0.5);
     border: 1px solid hsl(var(--outline));
   }
 
   /* Gradients */
   .gradient-hero {
-    background: linear-gradient(135deg, 
-      hsl(var(--accent-alt)), 
-      hsl(var(--accent)), 
+    background: linear-gradient(160deg,
+      hsl(207 40% 92%),
+      hsl(207 33% 95%),
+      hsl(210 30% 97%)
+    );
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg,
+      hsl(var(--accent)),
       hsl(var(--accent-strong))
     );
   }
 
   .gradient-subtle {
-    background: linear-gradient(180deg, 
-      hsl(var(--background)), 
+    background: linear-gradient(180deg,
+      hsl(var(--background)),
       hsl(var(--surface))
     );
   }
@@ -159,31 +121,31 @@ All colors MUST be HSL. Glass morphism and premium effects included.
   .glow-hover {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   .glow-hover:hover {
-    box-shadow: 0 10px 40px hsl(var(--hover-glow));
+    box-shadow: 0 8px 30px hsl(var(--hover-glow));
     transform: translateY(-2px);
   }
 
   /* Typography */
   .heading-xl {
     font-size: 3.5rem;
-    line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -0.03em;
   }
 
   .heading-lg {
     font-size: 2.5rem;
-    line-height: 1.2;
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 
   .heading-md {
     font-size: 1.75rem;
-    line-height: 1.3;
-    font-weight: 600;
+    line-height: 1.25;
+    font-weight: 700;
   }
 
   /* Mobile-First Touch Optimization */
@@ -192,25 +154,25 @@ All colors MUST be HSL. Glass morphism and premium effects included.
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Mobile Typography Improvements */
+  /* Mobile Typography */
   @media (max-width: 640px) {
     .heading-xl {
-      font-size: 2.5rem;
-      line-height: 1.15;
+      font-size: 2.25rem;
+      line-height: 1.12;
     }
-    
+
     .heading-lg {
-      font-size: 2rem;
-      line-height: 1.25;
+      font-size: 1.75rem;
+      line-height: 1.2;
     }
-    
+
     .heading-md {
-      font-size: 1.5rem;
+      font-size: 1.375rem;
       line-height: 1.3;
     }
   }
 
-  /* Enhanced Animations */
+  /* Animations */
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
   }
@@ -223,48 +185,22 @@ All colors MUST be HSL. Glass morphism and premium effects included.
     animation: slideUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-pulse-glow {
-    animation: pulseGlow 3s ease-in-out infinite;
-  }
-
-  .animate-badge-entrance {
-    animation: badgeEntrance 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-  }
-
-  .animate-text-shimmer {
-    animation: textShimmer 2s ease-in-out infinite;
-  }
-
-  /* Interactive Animations */
+  /* Interactive */
   .hover-lift {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .hover-lift:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 20px 60px hsl(var(--hover-glow));
-  }
-
-  .button-magnetic {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .button-magnetic:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 50px hsl(var(--hover-glow));
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px hsl(215 20% 50% / 0.12);
   }
 }
 
 @layer utilities {
-  /* Custom Surface Colors */
   .bg-surface {
     background-color: hsl(var(--surface));
   }
-  
+
   .bg-surface-elevated {
     background-color: hsl(var(--surface-elevated));
   }
@@ -293,160 +229,36 @@ All colors MUST be HSL. Glass morphism and premium effects included.
   gap: 10px;
 }
 
-.logo-sm {
-  height: 32px;
-}
-
-.logo-md {
-  height: 40px;
-}
-
-.logo-lg {
-  height: 48px;
-}
+.logo-sm { height: 32px; }
+.logo-md { height: 40px; }
+.logo-lg { height: 48px; }
 
 .brand-wordmark {
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+  color: hsl(var(--text-primary));
 }
 
 @media (min-width: 768px) {
-  .brand-wordmark {
-    font-size: 18px;
-  }
+  .brand-wordmark { font-size: 20px; }
 }
-
 @media (min-width: 1024px) {
-  .brand-wordmark {
-    font-size: 20px;
-  }
+  .brand-wordmark { font-size: 22px; }
 }
 
-/* Hero animated background */
-.hero-animated {
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-animated::before {
-  content: '';
-  position: absolute;
-  inset: -20%;
-  background: radial-gradient(120% 60% at 20% 20%, rgba(142, 63, 255, 0.25), transparent 60%), 
-              radial-gradient(120% 60% at 80% 30%, rgba(255, 94, 247, 0.22), transparent 60%), 
-              radial-gradient(160% 80% at 50% 80%, rgba(82, 39, 255, 0.18), transparent 60%);
-  filter: blur(30px);
-  animation: etherFlow 18s linear infinite;
-  will-change: transform;
-}
-
-@keyframes etherFlow {
-  0% { 
-    transform: translate3d(-2%, -2%, 0) scale(1); 
-  }
-  33% { 
-    transform: translate3d(2%, -1%, 0) scale(1.03); 
-  }
-  66% { 
-    transform: translate3d(-1%, 2%, 0) scale(0.98); 
-  }
-  100% { 
-    transform: translate3d(-2%, -2%, 0) scale(1); 
-  }
-}
-
-/* Enhanced Keyframes */
+/* Keyframes */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 20px hsl(var(--accent) / 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px hsl(var(--accent) / 0.6);
-  }
-}
-
-@keyframes badgeEntrance {
-  from {
-    opacity: 0;
-    transform: translateY(20px) scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes textShimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-@keyframes liquidFlow {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1);
-    background-position: 0% 50%;
-  }
-  25% {
-    transform: translate3d(-1%, 1%, 0) scale(1.02);
-    background-position: 25% 60%;
-  }
-  50% {
-    transform: translate3d(1%, -0.5%, 0) scale(0.98);
-    background-position: 50% 40%;
-  }
-  75% {
-    transform: translate3d(-0.5%, -1%, 0) scale(1.01);
-    background-position: 75% 65%;
-  }
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-    background-position: 100% 50%;
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }

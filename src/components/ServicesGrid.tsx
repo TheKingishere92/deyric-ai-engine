@@ -1,79 +1,73 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Bot, Phone, Brain, Building, Users, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const ServicesGrid = () => {
-  const services = [
-    {
-      title: "Deyric Automations",
-      summary: "Chatbots, scheduling, follow-ups, invoice flows, response bots.",
-      link: "/services#automations",
-      icon: Bot,
-    },
-    {
-      title: "Voice & Call Agents",
-      summary: "Multilingual AI receptionists, appointment setters, collections.",
-      link: "/services#voice", 
-      icon: Phone,
-    },
-    {
-      title: "AI Solutions",
-      summary: "CRMs, lead hubs, dashboards, funnels, marketing optimizers, HR screening.",
-      link: "/services#solutions",
-      icon: Brain,
-    },
-    {
-      title: "Industry Packages", 
-      summary: "Auto Dealer Suite, Global Real Estate, Healthcare, Education, Finance.",
-      link: "/services#industry",
-      icon: Building,
-    },
-    {
-      title: "Deyric Advisory",
-      summary: "Strategy, training, optimization, fractional CTO, white-label.",
-      link: "/services#advisory",
-      icon: Users,
-    },
-    {
-      title: "Deyric Labs (Future)",
-      summary: "Proprietary SaaS & AI data platforms.",
-      link: "/services#labs",
-      icon: Zap,
-    },
-  ];
-
   return (
-    <section className="py-16 sm:py-24 bg-surface">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-primary mb-4">What we build</h2>
+    <section className="py-20 sm:py-28 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <p className="text-sm font-bold text-[hsl(var(--accent))] uppercase tracking-wider mb-4">
+            Our solution
+          </p>
+          <h2 className="heading-lg text-primary mb-6">
+            We build AI systems that automate your operations and fill your pipeline
+          </h2>
+          <p className="text-secondary text-base sm:text-lg leading-relaxed">
+            From voice agents to full workflow automation, we deploy production-ready AI that delivers measurable ROI within weeks — not months.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <Link key={index} to={service.link} className="group">
-                <Card className="glass glow-hover border-outline cursor-pointer h-full touch-manipulation">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="p-3 rounded-xl bg-accent/10 border border-accent/20 group-hover:bg-accent/20 transition-colors">
-                        <IconComponent className="h-6 w-6 text-accent" />
-                      </div>
-                      <ArrowRight className="h-5 w-5 text-muted group-hover:text-accent transition-colors flex-shrink-0" />
-                    </div>
-                    <CardTitle className="text-primary text-lg sm:text-xl leading-tight">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <CardDescription className="text-secondary text-sm sm:text-base leading-relaxed">
-                      {service.summary}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </Link>
-            );
-          })}
+        <div className="max-w-5xl mx-auto">
+          {/* Comparison Table */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {/* Without */}
+            <div className="bg-surface-elevated rounded-2xl p-8 border border-outline">
+              <h3 className="text-lg font-bold text-primary mb-6">Without Deyric</h3>
+              <ul className="space-y-4">
+                {[
+                  "Manual follow-ups and scheduling",
+                  "Data scattered across tools",
+                  "High operational overhead",
+                  "Waiting for leads to come in",
+                  "Disconnected sales & ops",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-secondary text-sm sm:text-base">
+                    <span className="text-[hsl(var(--error))] mt-0.5 font-bold">✕</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* With */}
+            <div className="bg-[hsl(var(--text-primary))] rounded-2xl p-8 text-white">
+              <h3 className="text-lg font-bold mb-6">With Deyric</h3>
+              <ul className="space-y-4">
+                {[
+                  "AI agents handle calls, bookings & follow-ups",
+                  "Unified data across every system",
+                  "Costs drop by $50K–$150K/year",
+                  "Proactive pipeline generation",
+                  "Marketing, sales & ops in perfect sync",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-white/85 text-sm sm:text-base">
+                    <span className="text-[hsl(var(--accent))] mt-0.5 font-bold">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-3 bg-[hsl(var(--accent))] text-white px-8 py-4 rounded-full text-sm font-bold hover:bg-[hsl(var(--accent-strong))] transition-all duration-300 hover:scale-105 group"
+            >
+              Book your free strategy call
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
