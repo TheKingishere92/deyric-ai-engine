@@ -14,7 +14,7 @@ const Footer = () => {
     {
       title: "Contact",
       links: [
-        { label: "Request Infrastructure Audit", href: "https://calendly.com/david-deyric/20min-1" },
+        { label: "Book a Revenue Audit", href: "https://calendly.com/david-deyric/20min-1" },
         { label: "hello@deyric.com", href: "mailto:hello@deyric.com" },
       ],
     },
@@ -37,7 +37,7 @@ const Footer = () => {
               <span className="brand-wordmark">Deyric</span>
             </Link>
             <p className="text-secondary text-sm leading-relaxed mt-3 max-w-[200px]">
-              AI revenue infrastructure for mid-market enterprises.
+              AI revenue optimisation for service businesses.
             </p>
           </div>
 
@@ -70,7 +70,7 @@ const Footer = () => {
 
         <div className="rule pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
           <p className="text-faint text-xs">© {new Date().getFullYear()} Deyric. All rights reserved.</p>
-          <p className="text-faint text-xs">Deyric Revenue Infrastructure Framework™</p>
+          <p className="text-faint text-xs">Deyric Revenue Optimisation Framework™</p>
         </div>
       </div>
     </footer>

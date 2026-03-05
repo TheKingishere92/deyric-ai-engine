@@ -44,7 +44,7 @@ const Navigation = () => {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Request Audit
+              Book a Revenue Audit
             </a>
           </div>
 
@@ -77,7 +77,7 @@ const Navigation = () => {
                 className="btn-primary w-fit"
                 onClick={() => setIsOpen(false)}
               >
-                Request Audit
+                Book a Revenue Audit
               </a>
             </div>
           </div>
