@@ -8,13 +8,14 @@ import { ArrowRight } from "lucide-react";
 const Hero = () => (
   <section className="section pt-40 bg-surface-elevated border-b border-outline">
     <div className="content-column">
-      <p className="t-label mb-6">Deyric Revenue Optimization Framework™</p>
+      <p className="t-label mb-6">AI Revenue Optimization · Service Businesses</p>
       <h1 className="t-display text-primary mb-6">
-        Your service business is losing revenue at every operational gap.
+        Most service businesses lose $95K–$262K per year through gaps they haven't diagnosed.
       </h1>
       <p className="t-subhead max-w-[560px] mb-10">
-        Deyric identifies where revenue leaks, optimises how your team converts and retains clients,
-        and deploys AI-powered systems that close the gap — permanently.
+        Deyric audits where revenue is leaking across your acquisition, qualification,
+        follow-up, and conversion workflows — then deploys AI-powered systems that close
+        each gap with measurable precision.
       </p>
       <div className="flex flex-col sm:flex-row gap-3">
         <a
@@ -48,7 +49,7 @@ const Hero = () => (
 );
 
 /* ─────────────────────────────────────────────
-   SECTION 2 — FINANCIAL CONSEQUENCE
+   SECTION 2 — REVENUE LEAK DIAGNOSIS
 ───────────────────────────────────────────── */
 const FinancialConsequence = () => {
   const rows = [
@@ -82,13 +83,14 @@ const FinancialConsequence = () => {
   return (
     <section className="section bg-background border-b border-outline">
       <div className="content-column">
-        <p className="t-label mb-6">The cost of inaction</p>
+        <p className="t-label mb-6">Revenue Leak Diagnosis</p>
         <h2 className="t-headline text-primary mb-4">
-          Revenue loss in service businesses is structural, not incidental.
+          Where your business is losing revenue right now.
         </h2>
         <p className="t-subhead mb-12 max-w-[520px]">
-          The figures below reflect modelled analysis across service businesses operating without
-          optimised sales workflows or automated client management systems.
+          These are not edge cases. Each gap below reflects a structural pattern
+          present in the majority of service businesses operating without optimised
+          sales workflows or automated client management systems.
         </p>
 
         <div className="data-row pb-3">
@@ -118,7 +120,7 @@ const FinancialConsequence = () => {
 };
 
 /* ─────────────────────────────────────────────
-   SECTION 3 — OPTIMISATION FRAMEWORK
+   SECTION 3 — HOW WE FIX IT
 ───────────────────────────────────────────── */
 const OptimisationFramework = () => {
   const layers = [
@@ -155,13 +157,14 @@ const OptimisationFramework = () => {
   return (
     <section className="section bg-surface-elevated border-b border-outline">
       <div className="content-column">
-        <p className="t-label mb-6">Optimisation Framework</p>
+        <p className="t-label mb-6">How We Fix It</p>
         <h2 className="t-headline text-primary mb-4">
-          The Deyric Revenue Optimisation Framework™
+          Four systems. One integrated framework.
         </h2>
         <p className="t-subhead mb-14 max-w-[520px]">
-          A four-layer approach that integrates AI-powered systems into every stage of
-          how your service business generates, converts, and retains revenue.
+          The Deyric Revenue Optimization Framework™ addresses every stage where
+          service businesses lose revenue — from first contact to closed deal
+          and beyond.
         </p>
 
         <div className="space-y-px border border-outline">
@@ -195,7 +198,7 @@ const OptimisationFramework = () => {
 };
 
 /* ─────────────────────────────────────────────
-   SECTION 4 — DEPLOYMENT FRAMEWORK
+   SECTION 4 — OUR PROCESS
 ───────────────────────────────────────────── */
 const DeploymentFramework = () => {
   const phases = [
@@ -228,13 +231,13 @@ const DeploymentFramework = () => {
   return (
     <section className="section bg-background border-b border-outline">
       <div className="content-column">
-        <p className="t-label mb-6">Engagement process</p>
+        <p className="t-label mb-6">Our Process</p>
         <h2 className="t-headline text-primary mb-4">
-          From audit to live systems in 28 days or fewer.
+          Audit. Build. Deploy. 28 days.
         </h2>
         <p className="t-subhead mb-14 max-w-[520px]">
-          Every engagement follows a fixed three-phase process. Clear scope, defined outputs,
-          no extended discovery phases.
+          A fixed three-phase engagement with defined scope, clear outputs,
+          and no extended discovery phases. You know what you're getting before we start.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline border border-outline">
@@ -263,7 +266,7 @@ const DeploymentFramework = () => {
 };
 
 /* ─────────────────────────────────────────────
-   SECTION 5 — CLIENT SCENARIOS
+   SECTION 5 — BUSINESS IMPACT
 ───────────────────────────────────────────── */
 const ClientScenarios = () => {
   const scenarios = [
@@ -290,13 +293,13 @@ const ClientScenarios = () => {
   return (
     <section className="section bg-surface-elevated border-b border-outline">
       <div className="content-column">
-        <p className="t-label mb-6">Representative engagements</p>
+        <p className="t-label mb-6">Business Impact</p>
         <h2 className="t-headline text-primary mb-4">
-          How Deyric works across service business types.
+          Measurable outcomes across service business types.
         </h2>
         <p className="t-subhead mb-14 max-w-[520px]">
-          The following scenarios are representative of typical engagements.
-          Specifics vary by business model, team size, and existing tooling.
+          Representative results from typical engagements. Specifics vary by
+          business model, team size, and existing infrastructure.
         </p>
 
         <div className="space-y-px border border-outline">
@@ -331,20 +334,20 @@ const ClientScenarios = () => {
 };
 
 /* ─────────────────────────────────────────────
-   SECTION 6 — AUDIT CTA
+   SECTION 6 — FINAL CALL TO ACTION
 ───────────────────────────────────────────── */
 const AuditCTA = () => (
   <section className="section bg-background">
     <div className="content-column">
       <div className="border border-outline p-10 sm:p-14">
-        <p className="t-label mb-5">Revenue Audit</p>
+        <p className="t-label mb-5">Start Here</p>
         <h2 className="t-headline text-primary mb-4 max-w-[480px]">
-          Understand where your business is losing revenue before committing to any system.
+          Find out exactly where your revenue is leaking — in five business days.
         </h2>
         <p className="t-subhead mb-8 max-w-[480px]">
-          The audit is a structured five-day diagnostic. You receive a clear picture of where
-          revenue is leaking and a prioritised plan to fix it — regardless of whether
-          you engage further.
+          The Revenue Audit is a structured diagnostic with a clear deliverable:
+          a quantified leakage report and a prioritised plan to fix it.
+          No commitment beyond the audit required.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10 pt-8 border-t border-outline">
