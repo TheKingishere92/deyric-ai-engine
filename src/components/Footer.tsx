@@ -29,35 +29,38 @@ const Footer = () => {
 
   return (
     <footer className="border-t border-outline bg-surface-elevated">
-      <div className="content-column-wide mx-auto py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div className="content-column-wide mx-auto py-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-14 mb-20">
           <div>
-            <Link to="/" className="brand-logo mb-4 inline-flex">
+            <Link to="/" className="brand-logo mb-5 inline-flex">
               <img src={deyricLogo} alt="Deyric" className="logo-sm w-auto object-contain" />
               <span className="brand-wordmark">Deyric</span>
             </Link>
-            <p className="text-secondary text-sm leading-relaxed mt-3 max-w-[200px]">
+            <p className="text-secondary text-xs leading-relaxed mt-4 max-w-[190px]">
               AI revenue optimisation for service businesses.
             </p>
           </div>
 
           {cols.map((col) => (
             <div key={col.title}>
-              <p className="t-label mb-4">{col.title}</p>
-              <ul className="space-y-3">
+              <p className="t-label mb-5">{col.title}</p>
+              <ul className="space-y-3.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     {link.href.startsWith("http") || link.href.startsWith("mailto:") ? (
                       <a
                         href={link.href}
-                        className="text-secondary hover:text-primary text-sm transition-colors"
+                        className="text-secondary hover:text-primary text-xs transition-colors"
                         target={link.href.startsWith("http") ? "_blank" : undefined}
                         rel="noopener noreferrer"
                       >
                         {link.label}
                       </a>
                     ) : (
-                      <Link to={link.href} className="text-secondary hover:text-primary text-sm transition-colors">
+                      <Link
+                        to={link.href}
+                        className="text-secondary hover:text-primary text-xs transition-colors"
+                      >
                         {link.label}
                       </Link>
                     )}
@@ -68,9 +71,9 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="rule pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+        <div className="rule pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <p className="text-faint text-xs">© {new Date().getFullYear()} Deyric. All rights reserved.</p>
-          <p className="text-faint text-xs">Deyric Revenue Optimisation Framework™</p>
+          <p className="text-faint text-xs tracking-wide">Deyric Revenue Optimisation Framework™</p>
         </div>
       </div>
     </footer>
