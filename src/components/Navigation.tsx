@@ -16,22 +16,22 @@ const Navigation = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-outline">
-      <div className="content-column-wide mx-auto py-4">
-        <div className="flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-surface-elevated/96 backdrop-blur-md border-b border-outline">
+      <div className="content-column-wide mx-auto">
+        <div className="flex items-center justify-between h-16">
           <Link to="/" className="brand-logo" role="banner">
             <img src={deyricLogo} alt="Deyric" className="logo-sm w-auto object-contain" />
             <span className="brand-wordmark">Deyric</span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-9">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className={`text-sm transition-colors ${
+                className={`text-xs font-medium tracking-wide transition-colors ${
                   isActive(link.href)
-                    ? "text-primary font-medium"
+                    ? "text-primary"
                     : "text-secondary hover:text-primary"
                 }`}
               >
@@ -53,13 +53,13 @@ const Navigation = () => {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
+            {isOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
 
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-outline pt-4">
-            <div className="flex flex-col gap-4">
+          <div className="md:hidden pb-6 border-t border-outline pt-5">
+            <div className="flex flex-col gap-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}

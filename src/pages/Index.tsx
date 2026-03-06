@@ -6,13 +6,15 @@ import { ArrowRight } from "lucide-react";
    SECTION 1 — HERO
 ───────────────────────────────────────────── */
 const Hero = () => (
-  <section className="section pt-40 bg-surface-elevated border-b border-outline">
+  <section className="section pt-44 bg-surface-elevated border-b border-outline">
     <div className="content-column">
-      <p className="t-label mb-6">AI Revenue Optimization · Service Businesses</p>
-      <h1 className="t-display text-primary mb-6">
+      <div className="section-label">
+        <span className="t-label">AI Revenue Optimization · Service Businesses</span>
+      </div>
+      <h1 className="t-display mb-7 max-w-[640px]">
         Most service businesses lose $95K–$262K per year through gaps they haven't diagnosed.
       </h1>
-      <p className="t-subhead max-w-[560px] mb-10">
+      <p className="t-subhead max-w-[520px] mb-12">
         Deyric audits where revenue is leaking across your acquisition, qualification,
         follow-up, and conversion workflows — then deploys AI-powered systems that close
         each gap with measurable precision.
@@ -25,21 +27,21 @@ const Hero = () => (
           className="btn-primary"
         >
           Book a Revenue Audit
-          <ArrowRight className="h-4 w-4" />
+          <ArrowRight className="h-3.5 w-3.5" />
         </a>
         <a href="/case-studies" className="btn-ghost">
           View Client Results
         </a>
       </div>
 
-      <div className="mt-16 pt-10 border-t border-outline grid grid-cols-3 gap-8 max-w-[560px]">
+      <div className="mt-20 pt-10 border-t border-outline grid grid-cols-3 gap-10 max-w-[520px]">
         {[
           { stat: "2–4 wks", label: "Typical system deployment" },
           { stat: "$50K–$150K", label: "Avg. annual revenue recovered" },
           { stat: "4 layers", label: "Optimisation framework depth" },
         ].map((item) => (
           <div key={item.label}>
-            <p className="text-primary font-semibold text-lg mb-1">{item.stat}</p>
+            <p className="text-primary font-semibold text-xl mb-1.5 tracking-tight">{item.stat}</p>
             <p className="text-secondary text-xs leading-snug">{item.label}</p>
           </div>
         ))}
@@ -56,38 +58,40 @@ const FinancialConsequence = () => {
     {
       process: "Slow lead response",
       mechanism: "Leads contacted after 5 minutes convert at 8× lower rates — most service businesses respond in hours",
-      exposure: "$18K–$42K / year per sales rep",
+      exposure: "$18K–$42K / yr",
     },
     {
       process: "Unqualified sales activity",
       mechanism: "Sales and account teams spend an average of 4.2 hrs/week on contacts outside the ideal client profile",
-      exposure: "$22K–$55K / year per team",
+      exposure: "$22K–$55K / yr",
     },
     {
       process: "Pipeline drop-off",
       mechanism: "40–60% of active prospects go quiet between initial contact and decision — without a structured follow-up system",
-      exposure: "$30K–$90K / year in lost revenue",
+      exposure: "$30K–$90K / yr",
     },
     {
       process: "No re-engagement process",
       mechanism: "Former clients and lapsed prospects receive no structured outreach — recoverable revenue is left on the table",
-      exposure: "$15K–$45K / year recoverable",
+      exposure: "$15K–$45K / yr",
     },
     {
       process: "Operational handoff delays",
       mechanism: "Manual quoting, onboarding, and internal handoff steps add 6–11 days to average deal close time",
-      exposure: "$10K–$30K / year in velocity loss",
+      exposure: "$10K–$30K / yr",
     },
   ];
 
   return (
     <section className="section bg-background border-b border-outline">
       <div className="content-column">
-        <p className="t-label mb-6">Revenue Leak Diagnosis</p>
-        <h2 className="t-headline text-primary mb-4">
+        <div className="section-label">
+          <span className="t-label">Revenue Leak Diagnosis</span>
+        </div>
+        <h2 className="t-headline mb-4 max-w-[480px]">
           Where your business is losing revenue right now.
         </h2>
-        <p className="t-subhead mb-12 max-w-[520px]">
+        <p className="t-subhead mb-14 max-w-[480px]">
           These are not edge cases. Each gap below reflects a structural pattern
           present in the majority of service businesses operating without optimised
           sales workflows or automated client management systems.
@@ -96,19 +100,19 @@ const FinancialConsequence = () => {
         <div className="data-row pb-3">
           <span className="t-label">Operational gap</span>
           <span className="t-label">How revenue leaks</span>
-          <span className="t-label">Annual exposure</span>
+          <span className="t-label text-right">Annual exposure</span>
         </div>
 
         {rows.map((row, i) => (
           <div key={i} className="data-row">
-            <p className="text-primary text-sm font-medium pr-6 pt-1">{row.process}</p>
-            <p className="text-secondary text-sm leading-relaxed pr-6">{row.mechanism}</p>
-            <p className="text-primary text-sm font-semibold t-mono">{row.exposure}</p>
+            <p className="text-primary text-sm font-medium pr-8 pt-0.5">{row.process}</p>
+            <p className="text-secondary text-sm leading-relaxed pr-8">{row.mechanism}</p>
+            <p className="text-primary text-sm font-semibold t-mono text-right">{row.exposure}</p>
           </div>
         ))}
 
-        <div className="mt-8 p-5 bg-surface border border-outline">
-          <p className="text-secondary text-sm">
+        <div className="mt-10 p-6 bg-surface border border-outline">
+          <p className="text-secondary text-sm leading-relaxed">
             <span className="text-primary font-semibold">Total modelled exposure:</span>{" "}
             $95K–$262K per year, per business. These are not projections.
             They represent revenue already being lost through gaps in how the business operates.
@@ -157,31 +161,33 @@ const OptimisationFramework = () => {
   return (
     <section className="section bg-surface-elevated border-b border-outline">
       <div className="content-column">
-        <p className="t-label mb-6">How We Fix It</p>
-        <h2 className="t-headline text-primary mb-4">
+        <div className="section-label">
+          <span className="t-label">How We Fix It</span>
+        </div>
+        <h2 className="t-headline mb-4 max-w-[440px]">
           Four systems. One integrated framework.
         </h2>
-        <p className="t-subhead mb-14 max-w-[520px]">
+        <p className="t-subhead mb-16 max-w-[480px]">
           The Deyric Revenue Optimization Framework™ addresses every stage where
           service businesses lose revenue — from first contact to closed deal
           and beyond.
         </p>
 
-        <div className="space-y-px border border-outline">
+        <div className="border border-outline divide-y divide-outline">
           {layers.map((layer, i) => (
-            <div key={i} className="layer-card border-0 border-b border-outline last:border-b-0">
-              <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-6">
-                <div>
-                  <p className="t-label mb-2">{layer.index}</p>
-                  <p className="text-primary font-semibold text-base leading-snug">{layer.name}</p>
+            <div key={i} className="layer-card">
+              <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
+                <div className="pt-0.5">
+                  <p className="t-label mb-2.5">{layer.index}</p>
+                  <p className="text-primary font-semibold text-sm leading-snug">{layer.name}</p>
                 </div>
                 <div>
-                  <p className="text-secondary text-sm leading-relaxed mb-4">{layer.description}</p>
+                  <p className="text-secondary text-sm leading-relaxed mb-5">{layer.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {layer.components.map((c) => (
                       <span
                         key={c}
-                        className="text-xs font-medium text-secondary border border-outline px-3 py-1"
+                        className="text-xs font-medium text-secondary border border-outline px-3 py-1 bg-surface"
                       >
                         {c}
                       </span>
@@ -220,7 +226,7 @@ const DeploymentFramework = () => {
     },
     {
       phase: "Phase 03",
-      name: "Go-Live & Performance Calibration",
+      name: "Go-Live & Calibration",
       duration: "Days 19–28",
       description:
         "Phased rollout with live performance monitoring. Calibration of systems based on real-world data. Handoff to your team with documentation, training, and a 30-day support window.",
@@ -231,28 +237,30 @@ const DeploymentFramework = () => {
   return (
     <section className="section bg-background border-b border-outline">
       <div className="content-column">
-        <p className="t-label mb-6">Our Process</p>
-        <h2 className="t-headline text-primary mb-4">
+        <div className="section-label">
+          <span className="t-label">Our Process</span>
+        </div>
+        <h2 className="t-headline mb-4">
           Audit. Build. Deploy. 28 days.
         </h2>
-        <p className="t-subhead mb-14 max-w-[520px]">
+        <p className="t-subhead mb-16 max-w-[480px]">
           A fixed three-phase engagement with defined scope, clear outputs,
           and no extended discovery phases. You know what you're getting before we start.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline border border-outline">
           {phases.map((p, i) => (
-            <div key={i} className="bg-surface-elevated p-8">
-              <div className="flex items-start justify-between mb-5">
+            <div key={i} className="bg-surface-elevated p-9">
+              <div className="flex items-start justify-between mb-6">
                 <p className="t-label">{p.phase}</p>
                 <span className="t-mono text-faint">{p.duration}</span>
               </div>
-              <p className="text-primary font-semibold text-base mb-3">{p.name}</p>
-              <p className="text-secondary text-sm leading-relaxed mb-6">{p.description}</p>
-              <ul className="space-y-2">
+              <p className="text-primary font-semibold text-sm mb-3 leading-snug">{p.name}</p>
+              <p className="text-secondary text-sm leading-relaxed mb-7">{p.description}</p>
+              <ul className="space-y-2.5">
                 {p.outputs.map((o) => (
-                  <li key={o} className="flex items-start gap-2 text-xs text-secondary">
-                    <span className="text-faint mt-0.5 select-none">—</span>
+                  <li key={o} className="flex items-start gap-2.5 text-xs text-secondary">
+                    <span className="text-faint mt-0.5 select-none shrink-0">—</span>
                     {o}
                   </li>
                 ))}
@@ -293,34 +301,36 @@ const ClientScenarios = () => {
   return (
     <section className="section bg-surface-elevated border-b border-outline">
       <div className="content-column">
-        <p className="t-label mb-6">Business Impact</p>
-        <h2 className="t-headline text-primary mb-4">
+        <div className="section-label">
+          <span className="t-label">Business Impact</span>
+        </div>
+        <h2 className="t-headline mb-4 max-w-[480px]">
           Measurable outcomes across service business types.
         </h2>
-        <p className="t-subhead mb-14 max-w-[520px]">
+        <p className="t-subhead mb-16 max-w-[480px]">
           Representative results from typical engagements. Specifics vary by
           business model, team size, and existing infrastructure.
         </p>
 
-        <div className="space-y-px border border-outline">
+        <div className="border border-outline divide-y divide-outline">
           {scenarios.map((s, i) => (
-            <div key={i} className="bg-surface-elevated p-8 border-b border-outline last:border-b-0">
-              <div className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-6">
-                <div>
-                  <p className="t-label mb-1">Business type</p>
+            <div key={i} className="p-9">
+              <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-8">
+                <div className="pt-0.5">
+                  <p className="t-label mb-2">Business type</p>
                   <p className="text-primary font-semibold text-sm">{s.sector}</p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
                   <div>
-                    <p className="t-label mb-2">Challenge</p>
+                    <p className="t-label mb-3">Challenge</p>
                     <p className="text-secondary text-sm leading-relaxed">{s.challenge}</p>
                   </div>
                   <div>
-                    <p className="t-label mb-2">Systems deployed</p>
+                    <p className="t-label mb-3">Systems deployed</p>
                     <p className="text-secondary text-sm leading-relaxed">{s.systems}</p>
                   </div>
                   <div>
-                    <p className="t-label mb-2">Result</p>
+                    <p className="t-label mb-3">Result</p>
                     <p className="text-primary text-sm leading-relaxed font-medium">{s.outcome}</p>
                   </div>
                 </div>
@@ -339,25 +349,27 @@ const ClientScenarios = () => {
 const AuditCTA = () => (
   <section className="section bg-background">
     <div className="content-column">
-      <div className="border border-outline p-10 sm:p-14">
-        <p className="t-label mb-5">Start Here</p>
-        <h2 className="t-headline text-primary mb-4 max-w-[480px]">
+      <div className="border border-outline p-12 sm:p-16">
+        <div className="section-label">
+          <span className="t-label">Start Here</span>
+        </div>
+        <h2 className="t-headline mb-5 max-w-[440px]">
           Find out exactly where your revenue is leaking — in five business days.
         </h2>
-        <p className="t-subhead mb-8 max-w-[480px]">
+        <p className="t-subhead mb-12 max-w-[440px]">
           The Revenue Audit is a structured diagnostic with a clear deliverable:
           a quantified leakage report and a prioritised plan to fix it.
           No commitment beyond the audit required.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10 pt-8 border-t border-outline">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 pt-10 border-t border-outline">
           {[
             { item: "Scope", value: "Full diagnostic across acquisition, qualification, follow-up, and conversion" },
             { item: "Duration", value: "5 business days from engagement start" },
             { item: "Output", value: "Revenue leakage report and prioritised improvement roadmap" },
           ].map((d) => (
             <div key={d.item}>
-              <p className="t-label mb-2">{d.item}</p>
+              <p className="t-label mb-2.5">{d.item}</p>
               <p className="text-secondary text-sm leading-relaxed">{d.value}</p>
             </div>
           ))}
@@ -370,7 +382,7 @@ const AuditCTA = () => (
           className="btn-primary"
         >
           Book a Revenue Audit
-          <ArrowRight className="h-4 w-4" />
+          <ArrowRight className="h-3.5 w-3.5" />
         </a>
       </div>
     </div>
