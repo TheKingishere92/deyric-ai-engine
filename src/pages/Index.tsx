@@ -6,43 +6,39 @@ import { ArrowRight } from "lucide-react";
    SECTION 1 — HERO
 ───────────────────────────────────────────── */
 const Hero = () => (
-  <section className="section pt-44 bg-surface-elevated border-b border-outline">
+  <section className="section bg-surface-elevated border-b border-outline">
     <div className="content-column">
-      <div className="section-label">
-        <span className="t-label">AI Revenue Optimization · Service Businesses</span>
-      </div>
-      <h1 className="t-display mb-7 max-w-[640px]">
-        Most service businesses lose $95K–$262K per year through gaps they haven't diagnosed.
-      </h1>
-      <p className="t-subhead max-w-[520px] mb-12">
-        Deyric audits where revenue is leaking across your acquisition, qualification,
-        follow-up, and conversion workflows — then deploys AI-powered systems that close
-        each gap with measurable precision.
-      </p>
-      <div className="flex flex-col sm:flex-row gap-3">
-        <a
-          href="https://calendly.com/david-deyric/20min-1"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary"
-        >
-          Book a Revenue Audit
-          <ArrowRight className="h-3.5 w-3.5" />
-        </a>
-        <a href="/case-studies" className="btn-ghost">
-          View Client Results
-        </a>
-      </div>
+      <p className="t-label mb-8">AI Revenue Optimization · Service Businesses</p>
 
-      <div className="mt-20 pt-10 border-t border-outline grid grid-cols-3 gap-10 max-w-[520px]">
+      <h1 className="t-display mb-7 max-w-[600px]">
+        Fix the Broken Systems That Slow Down Your Growth
+      </h1>
+
+      <p className="t-subhead max-w-[500px] mb-12">
+        Deyric analyzes how opportunities move through your business, identifies
+        operational bottlenecks, and deploys AI-powered systems that improve
+        response speed, follow-up, and conversion.
+      </p>
+
+      <a
+        href="https://calendly.com/david-deyric/20min-1"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn-primary"
+      >
+        Book a Revenue Audit
+        <ArrowRight className="h-3.5 w-3.5" />
+      </a>
+
+      <div className="mt-14 pt-10 border-t border-outline flex flex-col sm:flex-row gap-6 sm:gap-12">
         {[
-          { stat: "2–4 wks", label: "Typical system deployment" },
-          { stat: "$50K–$150K", label: "Avg. annual revenue recovered" },
-          { stat: "4 layers", label: "Optimisation framework depth" },
+          "2–4 week system deployments",
+          "DRIF revenue infrastructure framework",
+          "AI-driven operational optimization",
         ].map((item) => (
-          <div key={item.label}>
-            <p className="text-primary font-semibold text-xl mb-1.5 tracking-tight">{item.stat}</p>
-            <p className="text-secondary text-xs leading-snug">{item.label}</p>
+          <div key={item} className="flex items-center gap-2.5">
+            <span className="w-1 h-1 rounded-full bg-[hsl(var(--outline-strong))] shrink-0" />
+            <p className="text-secondary text-sm">{item}</p>
           </div>
         ))}
       </div>
@@ -51,71 +47,52 @@ const Hero = () => (
 );
 
 /* ─────────────────────────────────────────────
-   SECTION 2 — REVENUE LEAK DIAGNOSIS
+   SECTION 2 — DIAGNOSIS
 ───────────────────────────────────────────── */
-const FinancialConsequence = () => {
-  const rows = [
+const Diagnosis = () => {
+  const breakdowns = [
     {
-      process: "Slow lead response",
-      mechanism: "Leads contacted after 5 minutes convert at 8× lower rates — most service businesses respond in hours",
-      exposure: "$18K–$42K / yr",
+      title: "Slow response to new inquiries",
+      body: "Leads contacted after more than five minutes convert at dramatically lower rates. Most service businesses respond in hours.",
     },
     {
-      process: "Unqualified sales activity",
-      mechanism: "Sales and account teams spend an average of 4.2 hrs/week on contacts outside the ideal client profile",
-      exposure: "$22K–$55K / yr",
+      title: "Inconsistent follow-up with prospects",
+      body: "Without a structured follow-up system, 40–60% of active prospects go quiet before a decision is made.",
     },
     {
-      process: "Pipeline drop-off",
-      mechanism: "40–60% of active prospects go quiet between initial contact and decision — without a structured follow-up system",
-      exposure: "$30K–$90K / yr",
+      title: "Manual workflows slowing teams down",
+      body: "Quoting, scheduling, routing, and internal handoffs handled manually add days to close time and drain team capacity.",
     },
     {
-      process: "No re-engagement process",
-      mechanism: "Former clients and lapsed prospects receive no structured outreach — recoverable revenue is left on the table",
-      exposure: "$15K–$45K / yr",
-    },
-    {
-      process: "Operational handoff delays",
-      mechanism: "Manual quoting, onboarding, and internal handoff steps add 6–11 days to average deal close time",
-      exposure: "$10K–$30K / yr",
+      title: "Limited visibility into performance",
+      body: "Without clear data on response speed, pipeline movement, and conversion rates, it is impossible to identify where to improve.",
     },
   ];
 
   return (
     <section className="section bg-background border-b border-outline">
       <div className="content-column">
-        <div className="section-label">
-          <span className="t-label">Revenue Leak Diagnosis</span>
-        </div>
-        <h2 className="t-headline mb-4 max-w-[480px]">
-          Where your business is losing revenue right now.
+        <p className="t-label mb-8">Diagnosis</p>
+
+        <h2 className="t-headline mb-14 max-w-[440px]">
+          Where Business Systems Break Down
         </h2>
-        <p className="t-subhead mb-14 max-w-[480px]">
-          These are not edge cases. Each gap below reflects a structural pattern
-          present in the majority of service businesses operating without optimised
-          sales workflows or automated client management systems.
-        </p>
 
-        <div className="data-row pb-3">
-          <span className="t-label">Operational gap</span>
-          <span className="t-label">How revenue leaks</span>
-          <span className="t-label text-right">Annual exposure</span>
+        <div className="space-y-0 border border-outline divide-y divide-outline">
+          {breakdowns.map((item, i) => (
+            <div key={i} className="p-8">
+              <p className="text-primary font-semibold text-sm mb-3 leading-snug">{item.title}</p>
+              <p className="text-secondary text-sm leading-relaxed max-w-[520px]">{item.body}</p>
+            </div>
+          ))}
         </div>
 
-        {rows.map((row, i) => (
-          <div key={i} className="data-row">
-            <p className="text-primary text-sm font-medium pr-8 pt-0.5">{row.process}</p>
-            <p className="text-secondary text-sm leading-relaxed pr-8">{row.mechanism}</p>
-            <p className="text-primary text-sm font-semibold t-mono text-right">{row.exposure}</p>
-          </div>
-        ))}
-
-        <div className="mt-10 p-6 bg-surface border border-outline">
-          <p className="text-secondary text-sm leading-relaxed">
-            <span className="text-primary font-semibold">Total modelled exposure:</span>{" "}
-            $95K–$262K per year, per business. These are not projections.
-            They represent revenue already being lost through gaps in how the business operates.
+        <div className="mt-10 pt-10 border-t border-outline">
+          <p className="text-secondary text-sm leading-relaxed max-w-[480px]">
+            Most businesses try to solve these problems with more marketing.{" "}
+            <span className="text-primary font-medium">
+              The real solution is fixing the systems behind them.
+            </span>
           </p>
         </div>
       </div>
@@ -124,77 +101,51 @@ const FinancialConsequence = () => {
 };
 
 /* ─────────────────────────────────────────────
-   SECTION 3 — HOW WE FIX IT
+   SECTION 3 — DRIF FRAMEWORK
 ───────────────────────────────────────────── */
-const OptimisationFramework = () => {
+const DRIFFramework = () => {
   const layers = [
     {
-      index: "Layer 01",
-      name: "Lead Acquisition & Response",
-      description:
-        "Automated outreach, intelligent inbound routing, and fast-response systems that ensure every qualified prospect is contacted within minutes — not hours. No lead is delayed, misrouted, or lost.",
-      components: ["Automated outbound sequences", "Inbound lead routing", "Response speed systems", "Lead qualification scoring"],
+      name: "Demand Capture",
+      description: "Capture and respond to inquiries instantly. No lead is delayed, misrouted, or lost due to slow or manual intake processes.",
     },
     {
-      index: "Layer 02",
-      name: "Sales Qualification & Pipeline Management",
-      description:
-        "Structured client profiling, conversational qualification workflows, and CRM enrichment. Removes low-value activity from your team's time without compromising conversion quality.",
-      components: ["Client fit assessment", "Qualification automation", "CRM data enrichment", "Pipeline health tracking"],
+      name: "Relationship Nurturing",
+      description: "Ensure consistent follow-up with every prospect across every stage of the pipeline, without relying on manual effort.",
     },
     {
-      index: "Layer 03",
-      name: "Follow-Up & Re-Engagement Systems",
-      description:
-        "Behavioural trigger sequences, structured multi-channel follow-up, and dormant client reactivation. Operates continuously across your full contact base without manual effort.",
-      components: ["Trigger-based follow-up", "Dormant client reactivation", "Multi-channel coordination", "Engagement monitoring"],
+      name: "Internal Workflow",
+      description: "Streamline scheduling, routing, and operational handoffs. Remove the friction between your sales and delivery teams.",
     },
     {
-      index: "Layer 04",
-      name: "Conversion & Client Onboarding Automation",
-      description:
-        "Proposal generation, onboarding workflows, and internal handoff automation. Compresses time-to-close and removes friction between your sales and delivery teams.",
-      components: ["Automated proposal workflows", "Onboarding sequence triggers", "Internal handoff systems", "Conversion velocity tracking"],
+      name: "Feedback Intelligence",
+      description: "Gain clear visibility into response speed, pipeline movement, and conversion performance across your entire operation.",
     },
   ];
 
   return (
     <section className="section bg-surface-elevated border-b border-outline">
       <div className="content-column">
-        <div className="section-label">
-          <span className="t-label">How We Fix It</span>
-        </div>
-        <h2 className="t-headline mb-4 max-w-[440px]">
-          Four systems. One integrated framework.
+        <p className="t-label mb-8">DRIF Framework</p>
+
+        <h2 className="t-headline mb-6 max-w-[440px]">
+          The Revenue Infrastructure Framework
         </h2>
-        <p className="t-subhead mb-16 max-w-[480px]">
-          The Deyric Revenue Optimization Framework™ addresses every stage where
-          service businesses lose revenue — from first contact to closed deal
-          and beyond.
+
+        <p className="t-subhead mb-16 max-w-[500px]">
+          Most service businesses rely on a chain of systems that move
+          opportunities toward revenue. When any part of that chain breaks down,
+          revenue is lost. Deyric strengthens this chain using the DRIF framework.
         </p>
 
-        <div className="border border-outline divide-y divide-outline">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-outline border border-outline">
           {layers.map((layer, i) => (
-            <div key={i} className="layer-card">
-              <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8">
-                <div className="pt-0.5">
-                  <p className="t-label mb-2.5">{layer.index}</p>
-                  <p className="text-primary font-semibold text-sm leading-snug">{layer.name}</p>
-                </div>
-                <div>
-                  <p className="text-secondary text-sm leading-relaxed mb-5">{layer.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {layer.components.map((c) => (
-                      <span
-                        key={c}
-                        className="text-xs font-medium text-secondary border border-outline px-3 py-1 bg-surface"
-                      >
-                        {c}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+            <div key={i} className="bg-surface-elevated p-9">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="t-mono text-faint text-xs">0{i + 1}</span>
+                <p className="text-primary font-semibold text-sm">{layer.name}</p>
               </div>
+              <p className="text-secondary text-sm leading-relaxed">{layer.description}</p>
             </div>
           ))}
         </div>
@@ -204,67 +155,44 @@ const OptimisationFramework = () => {
 };
 
 /* ─────────────────────────────────────────────
-   SECTION 4 — OUR PROCESS
+   SECTION 4 — PROCESS
 ───────────────────────────────────────────── */
-const DeploymentFramework = () => {
-  const phases = [
+const OurProcess = () => {
+  const steps = [
     {
-      phase: "Phase 01",
+      number: "1",
       name: "Revenue Audit",
-      duration: "Days 1–5",
-      description:
-        "A structured diagnostic of how your business currently acquires, qualifies, follows up, and closes clients. We identify where revenue is being lost and quantify the cost of each gap.",
-      outputs: ["Revenue leakage report", "Workflow gap analysis", "Prioritised improvement plan"],
+      description: "Identify where operational bottlenecks exist across acquisition, qualification, follow-up, and conversion. Delivered in five business days.",
     },
     {
-      phase: "Phase 02",
-      name: "System Design & Build",
-      duration: "Days 6–18",
-      description:
-        "Design and deployment of the optimisation layers identified in the audit. Includes workflow automation, AI-assisted systems, CRM integration, and testing before go-live.",
-      outputs: ["Live automation workflows", "AI-assisted sales systems", "CRM integration layer", "Pre-launch testing sign-off"],
+      number: "2",
+      name: "System Design",
+      description: "Design AI-powered systems tailored to the specific workflows and gaps identified in the audit. No generic templates.",
     },
     {
-      phase: "Phase 03",
-      name: "Go-Live & Calibration",
-      duration: "Days 19–28",
-      description:
-        "Phased rollout with live performance monitoring. Calibration of systems based on real-world data. Handoff to your team with documentation, training, and a 30-day support window.",
-      outputs: ["Production deployment", "Performance benchmarks", "Team documentation & training", "30-day monitoring window"],
+      number: "3",
+      name: "Deployment & Optimization",
+      description: "Implement and refine systems in a live environment, with performance monitoring and a 30-day calibration window.",
     },
   ];
 
   return (
     <section className="section bg-background border-b border-outline">
       <div className="content-column">
-        <div className="section-label">
-          <span className="t-label">Our Process</span>
-        </div>
-        <h2 className="t-headline mb-4">
-          Audit. Build. Deploy. 28 days.
-        </h2>
-        <p className="t-subhead mb-16 max-w-[480px]">
-          A fixed three-phase engagement with defined scope, clear outputs,
-          and no extended discovery phases. You know what you're getting before we start.
-        </p>
+        <p className="t-label mb-8">Our Approach</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline border border-outline">
-          {phases.map((p, i) => (
-            <div key={i} className="bg-surface-elevated p-9">
-              <div className="flex items-start justify-between mb-6">
-                <p className="t-label">{p.phase}</p>
-                <span className="t-mono text-faint">{p.duration}</span>
+        <h2 className="t-headline mb-16 max-w-[360px]">
+          Three phases. 28 days.
+        </h2>
+
+        <div className="space-y-0 divide-y divide-outline border border-outline">
+          {steps.map((step, i) => (
+            <div key={i} className="p-9 grid grid-cols-[48px_1fr] gap-8 items-start">
+              <span className="t-mono text-faint text-lg font-light pt-0.5">{step.number}</span>
+              <div>
+                <p className="text-primary font-semibold text-sm mb-3 leading-snug">{step.name}</p>
+                <p className="text-secondary text-sm leading-relaxed max-w-[440px]">{step.description}</p>
               </div>
-              <p className="text-primary font-semibold text-sm mb-3 leading-snug">{p.name}</p>
-              <p className="text-secondary text-sm leading-relaxed mb-7">{p.description}</p>
-              <ul className="space-y-2.5">
-                {p.outputs.map((o) => (
-                  <li key={o} className="flex items-start gap-2.5 text-xs text-secondary">
-                    <span className="text-faint mt-0.5 select-none shrink-0">—</span>
-                    {o}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
@@ -276,65 +204,40 @@ const DeploymentFramework = () => {
 /* ─────────────────────────────────────────────
    SECTION 5 — BUSINESS IMPACT
 ───────────────────────────────────────────── */
-const ClientScenarios = () => {
-  const scenarios = [
+const BusinessImpact = () => {
+  const outcomes = [
     {
-      sector: "Consulting Firm",
-      challenge: "High inbound enquiry volume with no qualification process. Partners spending significant time on prospects outside their ideal client profile.",
-      systems: "Layer 01 + 02: Automated enquiry routing, client fit scoring, calendar booking without manual coordination.",
-      outcome: "Qualified meeting rate +34%. Partner time on unqualified prospects reduced by 12 hrs/week.",
+      title: "Faster response to leads",
+      body: "Automated intake and routing systems ensure every qualified inquiry is contacted within minutes, not hours.",
     },
     {
-      sector: "Marketing Agency",
-      challenge: "Long proposal cycles with 60% of pipeline going cold between initial call and contract sign-off.",
-      systems: "Layer 03: Structured follow-up sequences, decision-stage re-engagement, automated proposal reminders.",
-      outcome: "Pipeline conversion rate +28%. Dormant prospect reactivation: 18% within 30 days.",
+      title: "Higher lead conversion",
+      body: "Structured follow-up sequences and re-engagement workflows recover prospects that would otherwise go silent.",
     },
     {
-      sector: "B2B Services",
-      challenge: "Manual account management across 400+ clients. No proactive outreach system. Re-orders reliant on client-initiated contact.",
-      systems: "Layer 01 + 04: Account health monitoring, automated re-engagement triggers, internal handoff automation.",
-      outcome: "Client retention +22%. Account manager admin reduced by 14 hrs/week per person.",
+      title: "Reduced operational friction",
+      body: "Automated handoffs, scheduling, and proposal workflows compress close times and free team capacity.",
+    },
+    {
+      title: "Better performance visibility",
+      body: "Real-time tracking across response speed, pipeline health, and conversion gives leadership clarity to act.",
     },
   ];
 
   return (
     <section className="section bg-surface-elevated border-b border-outline">
       <div className="content-column">
-        <div className="section-label">
-          <span className="t-label">Business Impact</span>
-        </div>
-        <h2 className="t-headline mb-4 max-w-[480px]">
-          Measurable outcomes across service business types.
-        </h2>
-        <p className="t-subhead mb-16 max-w-[480px]">
-          Representative results from typical engagements. Specifics vary by
-          business model, team size, and existing infrastructure.
-        </p>
+        <p className="t-label mb-8">Business Impact</p>
 
-        <div className="border border-outline divide-y divide-outline">
-          {scenarios.map((s, i) => (
-            <div key={i} className="p-9">
-              <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-8">
-                <div className="pt-0.5">
-                  <p className="t-label mb-2">Business type</p>
-                  <p className="text-primary font-semibold text-sm">{s.sector}</p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                  <div>
-                    <p className="t-label mb-3">Challenge</p>
-                    <p className="text-secondary text-sm leading-relaxed">{s.challenge}</p>
-                  </div>
-                  <div>
-                    <p className="t-label mb-3">Systems deployed</p>
-                    <p className="text-secondary text-sm leading-relaxed">{s.systems}</p>
-                  </div>
-                  <div>
-                    <p className="t-label mb-3">Result</p>
-                    <p className="text-primary text-sm leading-relaxed font-medium">{s.outcome}</p>
-                  </div>
-                </div>
-              </div>
+        <h2 className="t-headline mb-16 max-w-[400px]">
+          What Stronger Systems Improve
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-outline border border-outline">
+          {outcomes.map((item, i) => (
+            <div key={i} className="bg-surface-elevated p-9">
+              <p className="text-primary font-semibold text-sm mb-3 leading-snug">{item.title}</p>
+              <p className="text-secondary text-sm leading-relaxed">{item.body}</p>
             </div>
           ))}
         </div>
@@ -344,36 +247,23 @@ const ClientScenarios = () => {
 };
 
 /* ─────────────────────────────────────────────
-   SECTION 6 — FINAL CALL TO ACTION
+   SECTION 6 — FINAL CTA
 ───────────────────────────────────────────── */
-const AuditCTA = () => (
+const FinalCTA = () => (
   <section className="section bg-background">
     <div className="content-column">
       <div className="border border-outline p-12 sm:p-16">
-        <div className="section-label">
-          <span className="t-label">Start Here</span>
-        </div>
-        <h2 className="t-headline mb-5 max-w-[440px]">
-          Find out exactly where your revenue is leaking — in five business days.
-        </h2>
-        <p className="t-subhead mb-12 max-w-[440px]">
-          The Revenue Audit is a structured diagnostic with a clear deliverable:
-          a quantified leakage report and a prioritised plan to fix it.
-          No commitment beyond the audit required.
-        </p>
+        <p className="t-label mb-8">Start Here</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 pt-10 border-t border-outline">
-          {[
-            { item: "Scope", value: "Full diagnostic across acquisition, qualification, follow-up, and conversion" },
-            { item: "Duration", value: "5 business days from engagement start" },
-            { item: "Output", value: "Revenue leakage report and prioritised improvement roadmap" },
-          ].map((d) => (
-            <div key={d.item}>
-              <p className="t-label mb-2.5">{d.item}</p>
-              <p className="text-secondary text-sm leading-relaxed">{d.value}</p>
-            </div>
-          ))}
-        </div>
+        <h2 className="t-headline mb-6 max-w-[420px]">
+          Ready to Fix the Systems Slowing Your Growth?
+        </h2>
+
+        <p className="t-subhead mb-12 max-w-[440px]">
+          The Revenue Audit is a five-day diagnostic that identifies exactly where
+          your business is losing revenue and delivers a prioritised plan to fix it.
+          No commitment required beyond the audit itself.
+        </p>
 
         <a
           href="https://calendly.com/david-deyric/20min-1"
@@ -397,11 +287,11 @@ const Index = () => (
     <Navigation />
     <main>
       <Hero />
-      <FinancialConsequence />
-      <OptimisationFramework />
-      <DeploymentFramework />
-      <ClientScenarios />
-      <AuditCTA />
+      <Diagnosis />
+      <DRIFFramework />
+      <OurProcess />
+      <BusinessImpact />
+      <FinalCTA />
     </main>
     <Footer />
   </div>
